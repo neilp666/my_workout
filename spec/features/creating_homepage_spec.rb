@@ -5,7 +5,7 @@ RSpec.feature "Creating Home Page" do
     visit '/'
 
     expect(page).to have_link('Home')
-    expect(page).to have_link('My Workout')
+    expect(page).to have_link('My Workout App')
     expect(page).to have_content('Workout Area')
     expect(page).to have_content('Show off your workout')
   end
