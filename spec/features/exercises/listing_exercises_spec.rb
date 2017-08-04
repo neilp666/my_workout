@@ -2,8 +2,8 @@ require "rails_helper"
 
 RSpec.feature "Listing Exercises" do
   before do
-   @john = User.create(email: "neil@example.com", password: "password")
-   login_as(@john)
+   @neil = User.create(email: "neil@example.com", password: "password")
+   login_as(@neil)
 
    @e1 = @neil.exercises.create(duration_in_min: 20,
                                 workout: "My body building activity",
@@ -26,5 +26,14 @@ scenario "shows user's workout for the last 7 days" do
   expect(page).to have_content(@e2.workout)
   expect(page).to have_content(@e2.workout_date)
 
+ end
+
+ scenario "shows no exercises if none created" do
+  @neil.exercises.delete_all
+
+  visit '/'
+  click_link "My Workout"
+
+  expect(page).to have_content('No Workout Yet')
  end
 end
