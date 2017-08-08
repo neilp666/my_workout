@@ -14,10 +14,10 @@ end
 scenario "with valid data succeeds" do
   visit '/'
 
-  click_link "My workout"
+  click_link "My Workout"
 
   path = "/users/#{@owner.id}/exercises/#{@owner_exercise.id}/edit"
-  link = "a[href=\'{#path'}\']"
+  link = "a[href=\'{'#path'}\']"
   find(link).click
 
   fill_in "Duration", with: 45
