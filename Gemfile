@@ -19,6 +19,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
 gem 'jquery-ui-rails'
 gem 'd3-rails', '~> 4.1'
+gem 'will_paginate-bootstrap'
 
 
 group :development, :test do
