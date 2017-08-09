@@ -24,7 +24,7 @@ end
     href = "/friendships?friend_id=#{@neil.id}"
     expect(page).not_to have_link("Follow", :href => href)
 
-    link = "a[href='/friendships?friend_id=#{sam.id}']"
+    link = "a[href='/friendships?friend_id=#{@sam.id}']"
     find(link).click
 
     href = "/friendships?friend_id=#{@sam.id}"
