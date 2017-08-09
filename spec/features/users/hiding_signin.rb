@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Users signin link" do
   before do
-    @neil = User.create(email: "neil@example.com", password: "password")
+    @neil = User.create(first_name: "Neil" , last_name: "smith", email: "neil@example.com", password: "password")
   end
 
 scenario "upon successful signin" do
