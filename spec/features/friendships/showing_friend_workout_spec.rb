@@ -7,6 +7,8 @@ RSpec.feature "Showing friend Workout" do
                         email: "neil@example.com",
                         password: "password")
 
+    login_as(@neil)
+
     @sarah = User.create(first_name: "Sarah",
                         last_name: "Smith",
                         email: "sarah@example.com",
